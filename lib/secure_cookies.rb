@@ -18,6 +18,7 @@ module SecureCookies
     def config
       @config || DEFAULT_CONFIG
     end
+
     def config=(configuration)
       raise RuntimeError, "Already configured" if @config
       @config = configuration

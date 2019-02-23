@@ -6,6 +6,12 @@ module SecureCookies
     let(:cookie_app) { lambda { |env| [200, env.merge("Set-Cookie" => "foo=bar"), "app"] } }
     let(:cookie_middleware) { Middleware.new(cookie_app) }
 
+    after(:each) do
+      if SecureCookies.instance_variable_defined?(:@config)
+        SecureCookies.remove_instance_variable(:@config)
+      end
+    end
+
     context "cookies should be flagged" do
       it "flags cookies as secure" do
         SecureCookies.config = { secure: true, httponly: OPT_OUT, samesite: OPT_OUT }
