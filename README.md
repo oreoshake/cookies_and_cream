@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/oreoshake/secure_cookies.svg?branch=master)](https://travis-ci.org/oreoshake/secure_cookies)
+
 # SecureCookies
 
 SecureCookies is an extract of the cookie functionality from [secure_headers](https://github.com/twitter/secure_headers). Rails has good header support but the cookie support is still lacking. Maybe one day this functionality will be added to rails core.
