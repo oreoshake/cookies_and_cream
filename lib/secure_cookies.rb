@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "secure_cookies/cookie"
 require "secure_cookies/middleware"
 require "secure_cookies/railtie"
