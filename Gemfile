@@ -1,0 +1,23 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+gemspec
+
+group :test do
+  gem "coveralls"
+  gem "json"
+  gem "pry-nav"
+  gem "rack"
+  gem "rspec"
+  gem "rubocop"
+  gem "rubocop-github"
+  gem "term-ansicolor"
+  gem "tins"
+end
+
+group :guard do
+  gem "growl"
+  gem "guard-rspec"
+  gem "rb-fsevent"
+  gem "terminal-notifier-guard"
+end
