@@ -7,19 +7,12 @@ CookiesAndCream is an extract of the cookie functionality from [secure_headers](
 Note: the railtie currently isn't working (see #1) so there's a bit of manual setup for now.
 
 Gemfile:
+
 ```ruby
 gem "cookies_and_cream"
 ```
 
-application.rb:
-```ruby
-require "cookies_and_cream"
-
-module Foo
-  class Application < Rails::Application
-    ...
-    config.middleware.use CookiesAndCream::Middleware
-```
+A railtie will automatically insert the middleware for rails applications.
 
 ## Configuration
 
