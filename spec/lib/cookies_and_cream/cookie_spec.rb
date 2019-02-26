@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require "spec_helper"
 
-module SecureCookies
+module CookiesAndCream
   describe Cookie do
     let(:raw_cookie) { "_session=thisisatest" }
 
