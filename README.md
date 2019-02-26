@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/oreoshake/cookies_and_cream.svg?branch=master)](https://travis-ci.org/oreoshake/cookies_and_cream)
+[![Build Status](https://travis-ci.org/oreoshake/cookies_and_cream.svg?branch=master)](https://travis-ci.org/oreoshake/cookies_and_cream) [![Gem Version](https://badge.fury.io/rb/cookies_and_cream.svg)](https://badge.fury.io/rb/cookies_and_cream)
 
 # CookiesAndCream
 
