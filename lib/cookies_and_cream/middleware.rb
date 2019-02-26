@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-module SecureCookies
+module CookiesAndCream
   class Middleware
     def initialize(app)
       @app = app
@@ -10,8 +10,8 @@ module SecureCookies
       req = Rack::Request.new(env)
       status, headers, response = @app.call(env)
 
-      unless SecureCookies.config == OPT_OUT
-        flag_cookies!(headers, override_secure(env, SecureCookies.config))
+      unless CookiesAndCream.config == OPT_OUT
+        flag_cookies!(headers, override_secure(env, CookiesAndCream.config))
       end
 
       [status, headers, response]
@@ -26,12 +26,12 @@ module SecureCookies
         cookies = cookies.split("\n") unless cookies.is_a?(Array)
 
         headers["Set-Cookie"] = cookies.map do |cookie|
-          SecureCookies::Cookie.new(cookie, config).to_s
+          CookiesAndCream::Cookie.new(cookie, config).to_s
         end.join("\n")
       end
     end
 
-    # disable Secure cookies for non-https requests
+    # disable cookies and cream for non-https requests
     def override_secure(env, config = {})
       if scheme(env) != "https" && config != OPT_OUT
         config = config.dup

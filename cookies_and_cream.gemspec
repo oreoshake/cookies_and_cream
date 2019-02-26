@@ -2,24 +2,24 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "secure_cookies/version"
+require "cookies_and_cream/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "secure_cookies"
-  spec.version       = SecureCookies::VERSION
+  spec.name          = "cookies_and_cream"
+  spec.version       = CookiesAndCream::VERSION
   spec.authors       = ["Neil Matatall"]
   spec.email         = ["oreoshake@users.noreply.github.com"]
 
   spec.summary       = %q{Automatically marks all cookies as secure, httponly, and samesite=lax}
   spec.description   = %q{Secure your cookies with an API for opting out}
-  spec.homepage      = "https://github.com/oreoshake/secure_cookies"
+  spec.homepage      = "https://github.com/oreoshake/cookies_and_cream"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/oreoshake/secure_cookies"
-    spec.metadata["changelog_uri"] = "https://github.com/oreoshake/secure_cookies/CHANGELOG"
+    spec.metadata["source_code_uri"] = "https://github.com/oreoshake/cookies_and_cream"
+    spec.metadata["changelog_uri"] = "https://github.com/oreoshake/cookies_and_cream/CHANGELOG"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require "cgi"
 
-module SecureCookies
+module CookiesAndCream
   class CookiesConfigError < StandardError; end
   class Cookie
     attr_reader :raw_cookie, :config

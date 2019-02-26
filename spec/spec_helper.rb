@@ -5,4 +5,4 @@ require "rack"
 require "coveralls"
 Coveralls.wear!
 
-require File.join(File.dirname(__FILE__), "..", "lib", "secure_cookies")
+require File.join(File.dirname(__FILE__), "..", "lib", "cookies_and_cream")

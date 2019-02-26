@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "secure_cookies/cookie"
-require "secure_cookies/middleware"
-require "secure_cookies/railtie"
-require "secure_cookies/version"
+require "cookies_and_cream/cookie"
+require "cookies_and_cream/middleware"
+require "cookies_and_cream/railtie"
+require "cookies_and_cream/version"
 
-module SecureCookies
+module CookiesAndCream
   OPT_OUT = Object.new
 
   DEFAULT_CONFIG = {
@@ -84,7 +84,7 @@ module SecureCookies
 
     def validate_hash_or_true_or_opt_out!(attribute)
       if !(is_hash?(config[attribute]) || is_true_or_opt_out?(config[attribute]))
-        raise CookiesConfigError.new("#{attribute} cookie config must be a hash, true, or SecureCookies::OPT_OUT")
+        raise CookiesConfigError.new("#{attribute} cookie config must be a hash, true, or CookiesAndCream::OPT_OUT")
       end
     end
 
